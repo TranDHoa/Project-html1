@@ -1,0 +1,257 @@
+/* Bước 1 xếp lại kích thước tương đối đặt kiểu chữ */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "poppins", sans-serif;
+}
+/* ===============common================== */
+/* B2 bỏ dấu gạch chân */
+a {
+  text-decoration: none;
+}
+
+/* B6 Đặt kích thước cho hộp main-content */
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ======================================= */
+/* chỉnh màu cho khối header */
+.header {
+  background-color: #fffcf4;
+}
+/*  cho ba phần thẳng hàng */
+.header.fixed {
+  position: sticky;
+  top: -20px;
+  z-index: 1;
+}
+/* B3 cho ba thứ logo nav và btn thành một hàng */
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0px 8px;
+}
+/*B5 cho các thẻ từ nav về trái */
+.nav {
+  margin-left: auto;
+}
+/* B4 cho các thẻ của nav thành một hàng */
+.nav ul {
+  display: flex;
+}
+/* B7 Chỉnh màu cho phần nav */
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 0px 21px;
+}
+/* B8 thêm hiệu ứng đen chữ khi chuột vào */
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+/* B9 Thêm gạch chân chỗ home */
+.nav li.active a::after {
+  position: absolute;
+  left: 21px;
+  right: 6px;
+  content: "";
+  display: block;
+  background-color: #171100;
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+}
+/* cai dat mac dinh cho btn */
+.btn {
+  color: #ffffff;
+  font-size: 1.6rem;
+  background-color: #171100;
+  text-align: center;
+  padding: 11px 16px;
+  border-radius: 9999px;
+  display: inline-block;
+  line-height: 50px;
+  min-width: 118px;
+}
+/* btn có width 144px */
+.header .btn-sign-up {
+  min-width: 144px;
+}
+/* nav cách btn 49px */
+.header .action {
+  margin-left: 49px;
+}
+/* ===================hero================ */
+
+.hero {
+  padding-top: 56px;
+  background-color: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+
+.hero .content-block {
+  width: 52%;
+}
+
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-sum {
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 16px 32px 0px #0000000d;
+  padding: 24px;
+}
+
+.hero-sum .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-sum .item + .item {
+  margin-top: 23px;
+}
+.hero-sum .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff9e8;
+}
+
+.hero-sum .info {
+  margin-left: 16px;
+}
+
+.hero-sum .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.hero-sum .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+/* hero right */
+
+.hero .content-block {
+  padding-top: 64px;
+  padding-left: 130px;
+  width: 52%;
+}
+
+.hero .heading {
+  font-family: Sen;
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #171100;
+}
+
+.hero .desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.67;
+  text-align: left;
+  color: #5f5b53;
+  margin-top: 22px;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-cta {
+  background: #ffb900;
+  min-width: 180px;
+  line-height: 64px;
+}
+
+.hero .watch-video {
+  border: none;
+  background: transparent;
+  display: flex;
+  margin-left: 28px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  box-shadow: 0px 8px 16px 0px #00000012;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.hero .watch-video span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  text-align: left;
+  margin-left: 14px;
+}
+
+.hero .desc2 {
+  margin-top: 48px;
+}
+
+.hero .desc3 {
+  margin-top: 8px;
+}
+
+.hero .desc3 strong {
+  font-family: Sen;
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+  text-align: left;
+  margin-right: 15px;
+  color: #171100;
+}
+
+.hero .desc3 strong:nth-child(2) {
+  margin-left: 28px;
+}
